@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+.hd_ban{
+	clear: both;
+	margin-top: 80px;
+	width: 100%;
+	height: 170px;
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.banner{
+	clear: both;
+	background-image: url(../img/sub_banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 125px;
+}
+.bnv{
+	width: 1400px;
+	margin: 0 auto;
+	height: 45px;
+	line-height: 45px;
+
+}
+.bnv i{
+	color: #333;
+}
+.bnv a{
+	display: inline-block;
+	color: #333;
+	font-size: 14px;
+	text-indent: 3px;
+}
+.sub_vs{
+	padding-top: 70px;
+}
+.tabTit{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.tabTit label{
+	width: 20%;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	font-weight: bold;
+	cursor: pointer;
+}
+.tabTit label:last-of-type{
+	border-right: 0;
+}
+
+#ra1:checked ~ .tabTit label.item1{
+	background-color: #333;
+	color: #fff;
+}
+#ra2:checked ~ .tabTit label.item2{
+	background-color: #333;
+	color: #fff;
+}
+#ra3:checked ~ .tabTit label.item3{
+	background-color: #333;
+	color: #fff;
+}
+#ra4:checked ~ .tabTit label.item4{
+	background-color: #333;
+	color: #fff;
+}
+#ra5:checked ~ .tabTit label.item5{
+	background-color: #333;
+	color: #fff;
+}
+
+
+.raItem{
+	display: none;
+}
+.tabCon{
+	width: 100%;
+/*	background-color: fuchsia;*/
+	display: none;
+}
+#ra1:checked ~ .tabConBox .tabCon.item1{
+	display: block;
+}
+#ra2:checked ~ .tabConBox .tabCon.item2{
+	display: block;
+}
+#ra3:checked ~ .tabConBox .tabCon.item3{
+	display: block;
+}
+#ra4:checked ~ .tabConBox .tabCon.item4{
+	display: block;
+}
+#ra5:checked ~ .tabConBox .tabCon.item5{
+	display: block;
+}
+
+/* 공식 행사 */
+
+
+.fes1Wrap{
+	width: 100%;
+	height: auto;
+	margin-top: 70px;
+}
+.fes1{
+	width: 1000px;
+	height: 450px;
+	margin: 0 auto;
+	border-top: 1px dotted #333;
+}
+.fes1_con{
+	width: 50%;
+	float: left;
+}
+.fes1_con.item1{}
+.fes1_con.item2{
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+.fes1_tit{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+
+/* 일반 행사 */
+
+
+.fes2Wrap{
+	width: 100%;
+	height: auto;
+	margin-top: 70px;
+}
+.fes2{
+	width: 1000px;
+	height: 450px;
+	margin: 0 auto;
+	border-top: 1px dotted #333;
+}
+.fes2_con{
+	width: 50%;
+	float: left;
+}
+.fes2_con.item1{}
+.fes2_con.item2{
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+.fes2_tit{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+/* 전시 프로그램*/
+
+
+.proFrame{
+	width: 100%;
+	height: auto;
+	margin-top: 70px;
+}
+.pro{
+	width:50%;
+	height: 400px;
+	float: left;
+}
+.proTit{
+	text-align: left;
+	margin-top: 30px;
+	color: #097c25;
+	font-size: 22px;
+	font-weight: 600;
+	position: relative;
+}
+.proTit:before{
+	content: "";
+	display: block;
+	width: 50px;
+	height: 3px;
+	background-color: #097c25;
+	position: absolute;	
+	top: -10px;
+	left: 0;
+}
+.proCom{
+	float: left;
+	height: 80%;
+}
+.proCom.item1{
+	width: 40%;
+
+}
+.proCom.item1 img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.proCom.item2{
+	width: 60%;
+	padding: 0 20px;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 2;
+
+}
+.pro_noti td{
+	border-bottom: 1px dotted #097c25;
+	height: 30px;
+}
+.pro_noti td span{
+	color: #b22222;
+}
+
+
+/* 공연 프로그램 */
+
+
+.tabCon.item4 .notiFrame{
+	width: 100%;
+	height: auto;
+	margin: 70px auto;
+	border-top: 1px solid #ccc;
+}
+.notiFrame > div{
+	width: 100%;	
+}
+.dayTit{
+	text-align: center;
+	margin-top: 30px;
+	color: #555;
+	font-size: 22px;
+	font-weight: 600;
+	position: relative;
+}
+.dayTit:before{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: #097c25;
+	position: absolute;	
+	top: -10px;
+	left: calc(50% - 10px);
+}
+.noti{
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #097c25;
+	border-spacing: 0;
+
+}
+.noti thead td{
+	background-color: #98be1d;
+	color: #fff;
+	height: 50px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	border-bottom: 1px solid #097c25;
+	border-right: 1px solid #fff;
+}
+.noti tbody td{
+	font-size: 14px;
+	height: 50px;
+	text-indent: 20px;
+}
+.day0 .noti tbody td{
+	text-align: center;
+	height:50px;
+}
+
+
+
+/* 체험행사 */
+
+
+.tabCon.item5 .expBox{
+	width: 100%;
+	height: auto;
+	margin-top: 70px;
+}
+.tabCon.item5 .expBox > div{
+	float: left;
+	width: 33.33333%;
+	height: 700px;
+}
+.expImg{
+	width: 450px;
+	height: 490px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.expImg:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+	transition: 0.3s;
+}
+.expImg img{
+	display: block;
+	width: 450px;
+	height: 490px;
+	cursor: pointer;
+	position: relative;
+	transition: 0.8s;
+	transform: scale(1);
+	overflow: hidden;
+}
+.expImg:hover img{
+	transform: scale(1.15);
+}
+.expImg:hover::after{
+	opacity: 0;
+	
+}
+.expBox .expTit{
+	text-align: center;
+	color: #98be1d;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.expBox .expTit:after{
+	content: "";
+	display: block;
+	width: 20%;
+	height: 3px;
+	position: absolute;
+	top: -10px;
+	left: calc(50% - 10%);
+	background-color: #98be1d;
+}
+.expBox .expCon{
+	font-size: 14px;
+	text-indent: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
