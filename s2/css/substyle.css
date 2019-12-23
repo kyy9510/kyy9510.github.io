@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+.artist {
+	margin-top: 50px;
+}
+
+.artist {
+	clear: both;
+	width: 100%;
+	height: auto;
+}
+
+.art_tit {
+	font-size: 1.7em;
+	margin-top: 50px;
+}
+
+.art_tit span {
+	color: #486a00;
+}
+
+.art_tit:before {
+	content: "";
+	display: block;
+	width: 10%;
+	height: 3px;
+	background-color: #486a00;
+}
+
+.art_Frame {
+	margin-top: 20px;
+	width: 100%;
+	height: 960px;
+}
+
+.art_Frame .item {
+	float: left;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.art_Frame .art_img {
+	cursor: pointer;
+}
+
+.art_Frame .art_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	transform: scale(1);
+	transform-origin: 50% 0%;
+}
+
+.art_Frame .art_img:hover img {
+	transform: scale(1.2);
+}
+
+.art_Frame .art_con {
+	padding: 0 30px;
+	box-sizing: border-box;
+
+}
+
+.art_name {
+	font-size: 24px;
+}
+
+.art_birth {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.art_name_en {
+	font-weight: normal;
+	color: #555;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+.art_pro:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+	margin-bottom: 30px;
+}
+
+.art_pro {
+	width: 100%;
+}
+
+.pro {
+	width: 100%;
+	height: 150px;
+}
+
+.pro li {
+	float: left;
+	width: 50%;
+}
+
+.pro_tit {
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	font-weight: normal;
+	background-color: #486a00;
+}
+
+.con {
+	width: 100%;
+	line-height: 2;
+	margin-top: 10px;
+}
+
+.ex_tit {
+	width: 30%;
+}
+
+.pancafe td img {
+	display: block;
+	width: 20px;
+	height: 20px;
+	transition: 0.3s;
+}
+
+.pancafe td a {
+	display: block;
+	color: #333;
+}
+
+.pancafe a:hover img {
+	animation: ani 2s ease-in-out infinite alternate;
+}
+
+@keyframes ani {
+	0% {
+		margin-left: 0px;
+	}
+
+	25% {
+		margin-left: 10px;
+	}
+
+	50% {
+		margin-left: 0px;
+	}
+
+	75% {
+		margin-left: 10px;
+	}
+
+	100% {
+		margin-left: 0px;
+	}
+
+}
+
+.work {
+	clear: both;
+	width: 100%;
+	line-height: 2;
+}
+
+.work .pro_ex {
+	margin-top: 20px;
+}
+
+.work .pro_ex td {
+	padding-bottom: 20px;
+}
+
+.work .ex_tit {
+	width: 15%;
+}
+
+.art_gal {
+	width: 100%;
+	height: 327px;
+	position: relative;
+	margin-top: 20px;
+}
+
+.art_gal .btnBox {
+	z-index: 10;
+	font-size: 5em;
+	color: #fff;
+}
+
+.art_gal .btnBox li {
+	float: left;
+	position: absolute;
+	top: 25%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.art_gal .btnBox li.left {
+	left: 1%;
+}
+
+.art_gal .btnBox li.right {
+	right: 1%;
+}
+
+.art_gallery {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+}
+
+.art_gallery li {
+	float: left;
+	width: 10%;
+	transition: 0.3s;
+}
+
+.art_vd {
+	margin-top: 30px;
+}
+
+#black {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+
+}
+
+#big {
+	position: fixed;
+	width: 600px;
+	height: auto;
+	top: calc(50% - 300px);
+	left: calc(50% - 250px);
+	background-color: #fff;
+	z-index: 50;
+}
+
+#big img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
