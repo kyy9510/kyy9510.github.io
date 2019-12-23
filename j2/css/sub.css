@@ -1,0 +1,199 @@
+@charset "utf-8";
+#page1{
+	width: 100%;
+	height: 710px;
+	background-image: url(../img/subhd.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+.mainTit{
+	color: #fff;
+	font-size:3em;
+	text-align: center;
+	margin-top: 13%;
+}
+#side_nav{
+	width: 100%;
+	height: 90px;
+	background-color: #eee;
+}
+#side_nav ul{
+	width: 1200px;
+	margin: 0 auto;
+	line-height: 90px;
+}
+#side_nav li{
+	float: left;
+	width: 16.6666667%;
+}
+#side_nav li a{
+	display: block;
+	text-align: center;
+	color: #888;
+	font-weight: bold;
+	transition: 0.2s;
+}
+#side_nav li:hover a{
+	color: #000;
+}
+#side_nav .sel{
+	color: #000;
+}
+#page2{
+	clear: both;
+	width: 100%;
+	height: auto;
+}
+.content1{
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.pageTit{
+	text-align: center;
+	margin-top: 5%;
+	font-size: 26px;
+}
+.pageTit_line{
+	display: block;
+	width: 2px;
+	height: 50px;
+	background-color: #333;
+	margin: 10px auto;
+}
+.pageCon_k{
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.pageCon_e{
+	text-align: center;
+	font-size: 14px;
+}
+.contentBox{
+	width: 1400px;
+	margin: 0 auto;
+	height: 750px;
+/*	background-color:forestgreen;*/
+	margin-top: 50px;
+	position: relative;
+}
+
+.conImg{
+	z-index: 0;
+	width: 950px;
+	height: 573px;
+}
+.conImg img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.conTit{
+	width: 950px;
+	height: 500px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 80px 60px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.conTit_1:before{
+	content: "";
+	display: block;
+	width: 53%;
+	height:2px;
+	background-color: #333;
+	margin-bottom: 20px;
+}
+.conTit_1{
+	margin-bottom: 50px;
+}
+.conTit_2{
+	line-height: 2.5;
+	font-size: 15px;
+}
+.content2{
+	width: 1400px;
+	margin: 0 auto;
+}
+.con_map{
+	text-align: center;
+	margin-top: 30px;
+}
+#page3{
+	clear: both;
+	width: 100%;
+	height: 650px;
+	margin-top: 80px;
+	background-image: url(../img/subbg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position:center center;
+	padding: 70px;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+}
+#page3 .pageTit_line{
+	background-color: #fff;
+	margin-top: 10px;
+}
+#page3 .pageCon_k{
+	color: #fff;
+}
+#page3 .pageCon_e{
+	color: #fff;
+}
+.icoBox{
+	width: 1400px;
+	margin: 90px auto;
+}
+.icoBox li{
+	float: left;
+	width: 12.5%;
+}
+.icoBox li img{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+.icoTxt{
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	line-height: 2;
+}
+
+.eTit{
+	font-size: 14px;
+}
+.kTit{
+	font-size: 14px;
+}
+.title{
+	font-weight: bold;
+	font-size: 18px;
+}
+.con_logo{
+	clear: both;
+	text-align: center;
+	padding-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
