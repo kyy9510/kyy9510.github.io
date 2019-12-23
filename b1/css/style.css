@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+
+.slide {
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+}
+
+.banWrap {
+	width: 100vw;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+}
+
+.ban {
+	width: 300%;
+	height: 450px;
+}
+
+.ban li {
+	width: 33.33333%;
+	height: 450px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+}
+
+.ban .titBox {
+	position: absolute;
+	line-height: 1.2;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.ban .item1 {
+	background-image: url(../img/banner.jpg);
+}
+.ban .item2 {
+	background-image: url(../img/banner2.jpg);
+}
+.ban .item3 {
+	background-image: url(../img/banner_3.jpg);
+}
+.ban .item2 {
+	background-image: url(../img/banner2.jpg);
+}
+.ban .item1 .bTit1 {
+	color: #fff;
+	font-size: 4.5em;
+	font-weight: 500;
+	text-shadow: 1px 5px 5px #000;
+}
+
+.ban .item1 .bTit2 {
+	color: #e7e86b;
+	font-weight: 500;
+	font-size: 4.5em;
+	text-shadow: 1px 15px 10px #000;
+}
+
+.ban .item1 .bCom {
+	color: #fff;
+	font-size: 1.4em;
+	margin-top: 5%;
+	z-index: 5;
+	text-shadow: 1px 3px 3px #000;
+}
+
+.ban .burgerBox {
+	position: absolute;
+	overflow: hidden;
+}
+
+.ban .item1 .titBox {
+	top: 23%;
+	left: -50%;
+	transition: 0.8s;
+}
+
+.ban .item2 .titBox {
+	top: 20%;
+	right: -50%;
+	transition: 0.8s;
+}
+
+.ban .item1 .burgerBox {
+	top: 9%;
+	right: -40%;
+	transition: 0.8s;
+}
+
+.ban .item2 .burgerBox {
+	top: -4%;
+	left: -50%;
+	transition: 0.8s;
+}
+.ban .item3 .burgerBox{
+	bottom: -70%;
+	left: 36%;
+	transition: 0.5s;
+}
+
+.ban .item2 .bTit1 {
+	color: #fff;
+	font-size: 4em;
+	font-weight: 500;
+	text-shadow: 1px 5px 5px #000;
+}
+
+.ban .item2 .bTit2 {
+	color: #e7e86b;
+	font-weight: 500;
+	font-size: 4em;
+	text-shadow: 1px 15px 10px #000;
+}
+
+.ban .item2 .bCom {
+	color: #fff;
+	font-size: 1.4em;
+	margin-top: 5%;
+	z-index: 5;
+	text-shadow: 1px 3px 3px #000;
+}
+
+.ban li.on.item1 .titBox {
+	top: 23%;
+	left: 20%;
+}
+
+.ban li.on.item2 .titBox {
+	top: 20%;
+	right: 13%;
+}
+
+.ban li.on.item1 .burgerBox {
+	top: 9%;
+	right: 15%;
+}
+
+.ban li.on.item2 .burgerBox {
+	top: -4%;
+	left: 8%;
+}
+.ban li.on.item3 .burgerBox{
+	bottom: 9%;
+	left: 36%;
+}
+
+.btnBox{
+	position: absolute;
+	top: 40%;
+}
+.btn{
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 10px;
+	font-size: 90px;
+	line-height: 70px;
+	text-align: center;
+	background-color: transparent;
+/*	border: 2px solid #fff;
+	box-sizing: border-box;*/
+	color: #fff;
+	position: absolute;
+	cursor: pointer;
+}
+.btn.left{
+	left: 20px;
+}
+.btn.right{
+	left: 1780px;
+}
+.visual{
+	clear: both;
+	width: 100%;
+	height: 260px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.vsWrap{
+	width: 1300px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+.vsWrap .vs{
+	position: absolute;
+	top: 10%;
+	left: 0;
+}
+.vsWrap .vs li{
+	width: 33.3333%;
+	float: left;
+	cursor: pointer;
+}
+.vsWrap .vs li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.vsWrap .vs li a img{
+	display: block;
+	width: 100%;
+	transition: 0.3s;
+}
+.vsWrap .vs li:hover img{
+	opacity: 0.7;
+}
+.vd_box{
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+	position: relative;
+
+}
+.vd_wrap{
+	width: 1300px;
+	height:700px;
+	margin: 0 auto;
+}
+.video{
+	width: 1300px;
+	margin: 0 auto;
+	height: 700px;
+
+}
+.store{
+	width: 100%;
+	height: auto;
+}
+.sWrap{
+	width: 1300px;
+	margin:30px auto;
+}
+.sTit{
+	text-align: center;
+	font-weight: normal;
+	font-size: 30px;
+	position: relative;
+}
+.tit_flag{
+	position: absolute;
+	display: inline-block;
+	width: 40px;
+	height: 100%;
+	margin-left: 5px;
+}
+.sCon{
+	text-align: center;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.sIco{
+	display: block;
+	width: 150px;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	color: #333;
+	font-size: 22px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+.sIco img{
+	display: block;
+	width: 70px;
+	margin: 0 auto;
+}
+
+.sIco:hover{
+	animation: shake 0.7s infinite alternate;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(2px, 1px) rotate(-3deg);
+    }
+
+    20% {
+        transform: translate(0px, -2px) rotate(0deg);
+    }
+
+    30% {
+        transform: translate(-3px, 0px) rotate(-2deg);
+    }
+
+    40% {
+        transform: translate(-1px, 3px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(0px, 2px) rotate(-3deg);
+    }
+
+    60% {
+        transform: translate(1px, 1px) rotate(2deg);
+    }
+
+    70% {
+        transform: translate(3px, 0px) rotate(1deg);
+    }
+
+    80% {
+        transform: translate(0px, -2px) rotate(-2deg);
+    }
+
+    90% {
+        transform: translate(1px, 3px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-1px, 0px) rotate(-1deg);
+    }
+}
+
+.icoBox{
+	width: 1300px;
+	height: 200px;
+	margin: 0 auto;
+}
+.ico li{
+	width: 16.666667%;
+	float: left;
+}
+.ico li img{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+.ico li p{
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+}
+.ico li p span{
+	color: #b22222;
+}
+#pop{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+#pop iframe{
+	width: 100%;
+	height: auto;
+}
+#pop .popTit{
+	display: block;
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	bottom: 15%;
+	left: calc(50% - 150px);
+	color: #fff;
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid #fff;
+	transition: 0.3s;
+}
+.popLogo{
+	position: absolute;
+	bottom: 21%;
+	left: 43.5%;
+	color: #fff;
+	font-size: 38px;
+	text-shadow: 0 1px 1px #ccc;
+}
+#pop .popTit:hover{
+	background-color: rgba(255,255,255,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

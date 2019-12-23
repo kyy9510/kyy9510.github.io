@@ -1,0 +1,319 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	font-family: 'Do Hyeon','Jua', sans-serif;
+	line-height: 1.5;
+	font-size: 1.15em;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+botton,input,select{
+	border: 0;
+	outline: 0;
+}
+
+.wrap {
+	width: 100vw;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.banner {
+	width: 100vw;
+	height: auto;
+	background-color: forestgreen;
+}
+
+.banner img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.hd {
+	width: 70%;
+	height: 6em;
+	margin: 0 auto;
+	position: relative;
+	background-color: #fff;
+}
+
+.logo {
+	display: block;
+	position: absolute;
+	top: 13%;
+	left: 0;
+	width: 10%;
+	height: 10%;
+}
+
+.logo img {
+	display: block;
+	width: 80%;
+	height: auto;
+}
+
+#gnb {
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.95);
+	z-index: 10;
+	
+}
+#gnb:hover{
+	box-shadow:0 1px 0 0 #ccc;
+}
+/*#gnb:before{
+	content: "";
+	width: 100%;
+	background-color: #ccc;
+	height: 1px;
+	position: absolute;
+	top: 50px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3;
+}*/
+
+#gnb li {
+	float: left;
+	width: 20%;
+}
+
+#gnb li a {
+	display: block;
+	color: #333;
+}
+
+#gnb li a.dep1 {
+	width: 200px;
+	font-size: 22px;
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+#gnb .sub li {
+	clear: both;
+	width: 100%;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	line-height: 40px;
+	transition: 0.3s;
+	border-right: 1px solid #ccc;
+}
+#gnb li:first-child .sub li:last-child{
+	border-right: 0;
+}
+#gnb li:last-child .sub li{
+	border-right: 0;
+}
+#gnb .sub li a {
+	text-align: left;
+	text-indent: 20%;
+}
+
+#gnb:hover .sub li {
+	opacity: 1;
+	visibility: visible;
+	height: 45px;
+}
+
+#gnb:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+#gnb .sub li a {
+	font-size: 0.9em;
+}
+
+#gnb li:hover a.dep1 {
+	color: #b22222;
+}
+
+#gnb .sub li:hover a {
+	color: #b22222;
+}
+
+#gnb li a.dep1:after {
+	content: "";
+	display: block;
+	width: 80%;
+	height: 3px;
+	background-color: #b22222;
+	position: absolute;
+	bottom: 8%;
+	left: 15%;
+	margin-left: -200%;
+	transition: 0.5s;
+}
+
+#gnb li:hover a.dep1::after {
+	margin-left: 0px;
+}
+
+
+
+
+
+#sitemap{
+	clear: both;
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+	background-image: url(../img/site_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 65px;
+	background-position: center bottom;
+}
+#sitemap .menu{
+	width: 1300px;
+	height: 280px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+	
+}
+#sitemap .menu li{
+	float: left;
+	width: 20%;
+	position: relative;
+}
+#sitemap .menu li a{
+	text-align: left;
+	display: block;
+	color: #59493f;
+	font-size: 18px;
+	font-weight: 400;
+}
+#sitemap .menu li a.dep1{
+	font-size: 24px;
+	transition: 0.3s;
+	color: #59493f;
+}
+#sitemap .menu .sub li{
+	clear: both;
+	width: 100%;
+}
+#sitemap .sub{
+	position: absolute;
+	top: 0;
+	left: 90px;
+}
+#sitemap .sub li a{
+	transition: 0.2s;
+}
+
+#sitemap .sub li:hover a{
+	color: #d1c0a5;
+}
+.ft_wrap{
+	clear: both;
+	width: 100%;	
+}
+
+.ft_wrap{
+	clear: both;
+	width: 100%;
+	height: 200px;
+	background-color: #333;
+}
+.ft{
+	width: 1300px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.ft_logo{
+	display: inline-block;
+	width: 300px;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	position: relative;
+}
+.ft_logo img{
+	display: block;
+	width: 80px;
+}
+.ft_logo .logo_txt{
+	position: absolute;
+	color: #fff;
+	top: 40px;
+	right: 50px;
+	font-size: 24px;
+	font-weight: normal;
+}
+.copyright{
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	color: #ccc;
+	font-weight: 400;
+	font-size: 14px;
+}
+.snsBox{
+	position: absolute;
+	bottom: 80px;
+	right: 0;
+}
+.sns li{
+	float: left;
+	margin-right: 10px;
+}
+.sns li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+.sns li a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.2s;
+}
+.sns li:hover img{
+	opacity: 0.8;
+}
+#fnb{
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+}
+#fnb li{
+	float: left;
+	margin-right: 20px;
+}
+#fnb li a{
+	color: #ccc;
+	font-size: 16px;
+}
+#fnb li:hover a{
+	text-decoration: underline;
+}
+.bgWrap{
+	width: 100%;
+	height: auto;
+	background-image: url(../img/bg.jpg);
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
+}
