@@ -20,4 +20,29 @@ $(document).ready(function(){
              }
              ck1 = !ck1;
        }); 
+	
+	var ck3=true;
+	$("#collap li").click(function(){
+		if(ck3){
+			$(this).addClass("on");
+			
+		}else{
+			$(this).removeClass("on");
+		}
+		ck3 = !ck3;
+	});
+	
+	$(".toggle").click(function(){
+		$("#collap").animate({
+			"left":"0px"
+		},800)
+	});
+	$(".c_close").click(function(){
+		$("#collap").animate({
+			"left":"-110%"
+		},800)
+	});
+	
 });
+
+	
