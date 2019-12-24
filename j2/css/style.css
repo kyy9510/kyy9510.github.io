@@ -3,6 +3,7 @@
 	clear: both;
     width: 100%;
     line-height: 1.5;
+	overflow: hidden;
 }
 #page1{
     clear: both;
@@ -428,10 +429,915 @@
 	margin-bottom: 15px;
 }
 
+@media all and (max-width:767px){
+	
+	#wrap{
+	clear: both;
+    width: 100%;
+    line-height: 1.5;
+}
+#page1{
+    clear: both;
+	width: 100%;
+	height:282px;
+	max-height: 350px;
+    overflow: hidden;
+    position: relative;    
+    background-color: rgba(0,0,0,1);
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vs{
+    width: 500%;
+}
+.vs li{
+    float: left;
+    width: 20%;
+    position: relative;
+    opacity: 0.8;
+    transition: 2s;
+    overflow: hidden;
+}
+.vs li.on{
+    opacity: 1;
+}
+.vs li img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.txtBox{
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+    text-align: left;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.vs li.on .txtBox{
+    left: 5%;
+}
+/*.vs li.on .txtBox::after{
+    bottom:0px;
+}*/
+.k_txt{
+    font-size: 1em;
+}
+.e_txt{
+    font-size: 0.9em;
+}
+.txtBox:after{
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+	left: 0;
+    bottom: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#page2{
+    clear: both;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 0;
+    
+}
+.page2_titBox{
+    width: 100%;
+	margin: 0 auto;
+    height: 80px;
+    position:relative;
+}
+.page2Tit{
+    font-size: 1.2em;
+    position: absolute;
+    top:20px;
+    left: 4%;
+    color: #333;
+}
+.square{
+    display: block;
+    border: 2px solid #333;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 3%;
+}
+.more_bk{
+    display: block;
+    width: 80px;
+    height: 30px;
+    text-align: right;
+    color: #333;
+    position: absolute;
+    bottom: 20%;
+	right: 2%;
+	font-size: 0.9em;
+}
+.more_bk .udLine{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 80px;
+    height: 2px;
+    background-color: #333;
+    transition: 0.5s;
+}
+.more_bk:hover .udLine{
+    width: 150px;
+}
+.page2_slide{
+    clear: both;
+    width: 100%;
+    height: 236px;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+.banner li{
+    width: 100%;
+    height: 100%;
+    clear: both;
+    cursor: pointer;
+}
+.banner li a{
+    display: block;
+    color: #fff;
+}
+.banner li{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner li:hover::after{
+    bottom: 0;
+}
+.banner li.item1{
+    background-image: url(../img/vs1-1.jpg);
+}
+.banner li.item2{
+    background-image: url(../img/vs2-2.jpg);
+}
+.banner li.item3{
+    background-image: url(../img/vs3.jpg);
+}
+.banner li.item4{
+    background-image: url(../img/vs4-1.jpg);
+}
+.banner li.item5{
+    background-image: url(../img/vs5-1.jpg);
+}
+.banTitBox{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: 0.4s;
+    z-index: 9;
+}
+.banner li:hover .banTitBox{
+    bottom: 0;
+}
+
+.banTit{
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.banCon{
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 5%;
+    color: #ccc;
+}
+
+#page3{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.page3_titBox{
+	width: 100%;
+    height: 80px;
+    position:relative;
+}
+
+.page3Tit{
+    font-size: 1.5em;
+    position: absolute;
+    top:20px;
+    left:2%;
+    color: #333;
+}
+.page3Tit:after{
+	content: "";
+	display: block;
+	width: 150%;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.page3_titBox .more_bk{
+	position: absolute;
+	top: 50%;
+	right: 2%;
+}
+
+.work_box{
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid: 		/*'menu1 menu2 menu3 menu4'
+				'menu1 menu6 menu3 menu8'
+				'menu5 menu6 menu7 menu8'*/
+		'menu1 menu2'
+		'menu4 menu3'
+		'menu5 menu6'
+		'menu8 menu7';
+	
+	
+	grid-gap: 0;
+}
+
+.work_box .menu{
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+.work_box .menu img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 0.5s;
+	transform: scale(1);
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+}
+.work_box .menu:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	border:3px solid #ccc;
+	border-bottom: 0;
+	box-sizing: border-box;
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transform: 0.5s;
+}
+.work_box .menu .work_tit{
+	text-align: center;
+	padding-top:20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.work_box .menu .work_tit:after{
+	content: "";
+	display: block;
+	width: 60%;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: -110%;
+	transition: 0.5s;
+}
+.work_box .menu:hover .work_tit:after{
+	left: 20%;
+}
+.work_box .menu:hover::after{
+	opacity: 1;
+}
+.work_box .menu1{
+	grid-area: menu1;
+}
+.work_box .menu2{
+	grid-area: menu2;	
+}
+.work_box .menu3{
+	grid-area: menu3;	
+}
+.work_box .menu4{
+	grid-area: menu4;
+}
+.work_box .menu5{
+	grid-area: menu5;	
+}
+.work_box .menu6{
+	grid-area: menu6;	
+}
+.work_box .menu7{
+	grid-area: menu7;	
+}
+.work_box .menu8{
+	grid-area: menu8;
+}
+.work_box .menu:hover img{
+	transform: scale(1.06);
+}
+
+#page4{
+	width: 100%;
+	height: 430px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 3%;
+}
+.page4_wrap{
+	width: 100%;
+	height: 80%;
+	background-image: url(../img/conbg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: top center;
+	z-index: 0;
+}
+
+.page4_titBox{
+    height: 150px;
+    position:relative;
+	width: 100%;
+	top: 30%;
+	left: 0;
+	z-index: 99;
+	
+}
+.page4Tit{
+	font-size:1.5em;
+    position: absolute;
+    top:20px;
+    left:2%;
+    color: #fff;
+}
+.page4Tit:after{
+	content: "";
+	display: block;
+	width: 150%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.page4_titBox .more_bk{
+	position: absolute;
+	top: 20px;
+	right: 2%;
+	color: #fff;
+}
+.page4_titBox .more_bk .udLine{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.page4_titBox .more_bk:hover .udLine{
+    width: 150px;
+}
+.news{
+	clear: both;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	height:300px;
+	padding: 5%;
+	overflow: hidden;
+	background-color: #000;
+	box-sizing: border-box;
+}
+.news li{
+	float: left;
+	width: 30%;
+	margin: 1%;
+	height: 100%;
+	overflow: hidden;
+}
+	
+.news li:hover img{
+	opacity: 1;
+}
+.news li img{
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	transition: 0.3s;
+	opacity: 0.75;
+}
+.news li span{
+	margin-top: 15px;
+	display: block;
+	color: #fff;
+	font-size: 0.8em;
+	text-align: left;
+	transition: 0.3s;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+.news li:hover span{
+	text-decoration: underline;
+}
+.news li span.newsData{
+	color: #ccc;
+	margin-bottom: 15px;
+}
+	
+	
+}
 
 
 
+@media all and (min-width:768px) and (max-width:959px){
+	
+		#wrap{
+	clear: both;
+    width: 100%;
+    line-height: 1.5;
+}
+#page1{
+    clear: both;
+	width: 100%;
+	height:450px;
+	max-height: 500px;
+    overflow: hidden;
+    position: relative;    
+    background-color: rgba(0,0,0,1);
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.vs{
+    width: 500%;
+}
+.vs li{
+    float: left;
+    width: 20%;
+    position: relative;
+    opacity: 0.8;
+    transition: 2s;
+    overflow: hidden;
+}
+.vs li.on{
+    opacity: 1;
+}
+.vs li img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.txtBox{
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+    text-align: left;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.vs li.on .txtBox{
+    left: 5%;
+}
+/*.vs li.on .txtBox::after{
+    bottom:0px;
+}*/
+.k_txt{
+    font-size: 1em;
+}
+.e_txt{
+    font-size: 0.9em;
+}
+.txtBox:after{
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+	left: 0;
+    bottom: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#page2{
+    clear: both;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 0;
+    
+}
+.page2_titBox{
+    width: 100%;
+	margin: 0 auto;
+    height: 80px;
+    position:relative;
+}
+.page2Tit{
+    font-size: 1.2em;
+    position: absolute;
+    top:20px;
+    left: 4%;
+    color: #333;
+}
+.square{
+    display: block;
+    border: 2px solid #333;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 3%;
+}
+.more_bk{
+    display: block;
+    width: 80px;
+    height: 30px;
+    text-align: right;
+    color: #333;
+    position: absolute;
+    bottom: 20%;
+	right: 2%;
+	font-size: 0.9em;
+}
+.more_bk .udLine{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 80px;
+    height: 2px;
+    background-color: #333;
+    transition: 0.5s;
+}
+.more_bk:hover .udLine{
+    width: 150px;
+}
+.page2_slide{
+    clear: both;
+    width: 100%;
+    height: 236px;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+.banner li{
+    width: 100%;
+    height: 100%;
+    clear: both;
+    cursor: pointer;
+}
+.banner li a{
+    display: block;
+    color: #fff;
+}
+.banner li{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner li:hover::after{
+    bottom: 0;
+}
+.banner li.item1{
+    background-image: url(../img/vs1-1.jpg);
+}
+.banner li.item2{
+    background-image: url(../img/vs2-2.jpg);
+}
+.banner li.item3{
+    background-image: url(../img/vs3.jpg);
+}
+.banner li.item4{
+    background-image: url(../img/vs4-1.jpg);
+}
+.banner li.item5{
+    background-image: url(../img/vs5-1.jpg);
+}
+.banTitBox{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: 0.4s;
+    z-index: 9;
+}
+.banner li:hover .banTitBox{
+    bottom: 0;
+}
+
+.banTit{
+    font-size: 1em;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.banCon{
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 1%;
+    color: #ccc;
+}
+
+#page3{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.page3_titBox{
+	width: 100%;
+    height: 80px;
+    position:relative;
+}
+
+.page3Tit{
+    font-size: 1.5em;
+    position: absolute;
+    top:20px;
+    left:2%;
+    color: #333;
+}
+.page3Tit:after{
+	content: "";
+	display: block;
+	width: 150%;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: 2%;
+}
+.page3_titBox .more_bk{
+	position: absolute;
+	top: 50%;
+	right: 2%;
+}
+
+.work_box{
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid: 		'menu1 menu2 menu3 menu4'
+				'menu1 menu6 menu3 menu8'
+				'menu5 menu6 menu7 menu8'
+		/*'menu1 menu2'
+		'menu4 menu3'
+		'menu5 menu6'
+		'menu8 menu7'*/;
+	
+	
+	grid-gap: 0;
+}
+
+.work_box .menu{
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+.work_box .menu img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 0.5s;
+	transform: scale(1);
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+}
+.work_box .menu:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	border:3px solid #ccc;
+	border-bottom: 0;
+	box-sizing: border-box;
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transform: 0.5s;
+}
+.work_box .menu .work_tit{
+	text-align: center;
+	padding-top:20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.work_box .menu .work_tit:after{
+	content: "";
+	display: block;
+	width: 60%;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: -110%;
+	transition: 0.5s;
+}
+.work_box .menu:hover .work_tit:after{
+	left: 20%;
+}
+.work_box .menu:hover::after{
+	opacity: 1;
+}
+.work_box .menu1{
+	grid-area: menu1;
+}
+.work_box .menu2{
+	grid-area: menu2;	
+}
+.work_box .menu3{
+	grid-area: menu3;	
+}
+.work_box .menu4{
+	grid-area: menu4;
+}
+.work_box .menu5{
+	grid-area: menu5;	
+}
+.work_box .menu6{
+	grid-area: menu6;	
+}
+.work_box .menu7{
+	grid-area: menu7;	
+}
+.work_box .menu8{
+	grid-area: menu8;
+}
+.work_box .menu:hover img{
+	transform: scale(1.06);
+}
+
+#page4{
+	width: 100%;
+	height: 430px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 3%;
+}
+.page4_wrap{
+	width: 100%;
+	height: 80%;
+	background-image: url(../img/conbg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: top center;
+	z-index: 0;
+}
+
+.page4_titBox{
+    height: 150px;
+    position:relative;
+	width: 100%;
+	top: 30%;
+	left: 0;
+	z-index:50;
+	
+}
+.page4Tit{
+	font-size:1.5em;
+    position: absolute;
+    top:20px;
+    left:2%;
+    color: #fff;
+}
+.page4Tit:after{
+	content: "";
+	display: block;
+	width: 150%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 2%;
+}
+.page4_titBox .more_bk{
+	position: absolute;
+	top: 20px;
+	right: 2%;
+	color: #fff;
+}
+.page4_titBox .more_bk .udLine{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.page4_titBox .more_bk:hover .udLine{
+    width: 150px;
+}
+.news{
+	clear: both;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	height:300px;
+	padding: 5%;
+	overflow: hidden;
+	background-color: #000;
+	box-sizing: border-box;
+}
+.news li{
+	float: left;
+	width: 30%;
+	margin: 1%;
+	height: 100%;
+	overflow: hidden;
+}
+	
+.news li:hover img{
+	opacity: 1;
+}
+.news li img{
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	transition: 0.3s;
+	opacity: 0.75;
+}
+.news li span{
+	margin-top: 15px;
+	display: block;
+	color: #fff;
+	font-size: 0.8em;
+	text-align: left;
+	transition: 0.3s;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+.news li:hover span{
+	text-decoration: underline;
+}
+.news li span.newsData{
+	color: #ccc;
+	margin-bottom: 15px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
 
 
 
