@@ -2,787 +2,863 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-	<title>강예은 Portfolio</title>
-	<link rel="shortcut icon" href="./favicon/favicon_16.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-	<link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
-	
-	<link rel="stylesheet" href="./css/style.css">
-	
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.mixitup.min.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-		$(document).ready(function() {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>강예은 Portfolio</title>
+    <link rel="shortcut icon" href="./favicon/favicon_16.png">
+    <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
 
-			$("#mixItUp").mixItUp({
-				selector: {
-					filter: ".filter"
-				}
-			});
+            $("#mixItUp").mixItUp({
+                selector: {
+                    filter: ".filter"
+                }
+            });
 
-			function pop(idx) {
-				state = 1;
-				$("#black").fadeIn();
-				$('.pop').eq(idx).fadeIn();
-				//		$('html, body').css({'overflow' : 'hidden'}); //스크롤 없애기
-			}
+            function pop(idx) {
+                state = 1;
+                $("#black").fadeIn();
+                $('.pop').eq(idx).fadeIn();
+                //		$('html, body').css({'overflow' : 'hidden'}); //스크롤 없애기
+            }
 
-			function pop_close() {
-				state = 0;
-				$("#black").fadeOut();
-				$('.pop').fadeOut();
-				//		$('html, body').css({'overflow' : 'visible'});
-			}
+            function pop_close() {
+                state = 0;
+                $("#black").fadeOut();
+                $('.pop').fadeOut();
+                //		$('html, body').css({'overflow' : 'visible'});
+            }
 
-			$("#black,.pop").hide();
-			$(".container .mix").on("click", function() {
-				pop($(this).index());
-				return false;
+            $("#black,.pop").hide();
+            $(".container .mix").on("click", function() {
+                pop($(this).index());
+                return false;
 
-				//html내부 내용을 변경하거나 가져올 수 있다.
-			});
-			$("#black .close").on("click", function() {
-				pop_close($(this).index());
-				return false;
-			});
+                //html내부 내용을 변경하거나 가져올 수 있다.
+            });
+            $("#black").on("click", function() {
+                pop_close($(this).index());
+                return false;
+            });
 
 
-		});
-	</script>
-	<script>
-		$(document).ready(function() {
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
 
-			$(".scroll").fadeIn();
-			$(window).scroll(function() {
-				var scrollValue = $(document).scrollTop();
-				var p_idx = $(".page").index();
-				var p_wh = $(".page").height();
+            $(".scroll").fadeIn();
+            $(window).scroll(function() {
+                var scrollValue = $(document).scrollTop();
+                var p_idx = $(".page").index();
+                var p_wh = $(".page").height();
 
-				if (scrollValue <= 0) {
-					$("a.menu_btn1").text("- Home");
-					$("a.menu_btn2").text("- A");
-					$("a.menu_btn3").text("- P");
-					$("a.menu_btn4").text("- C");
-					$("a").removeClass("select");
-					$("a.menu1").addClass("select");
-					$(".scroll").fadeIn();
-				} else if (scrollValue <= 1 * p_wh) { //1080
-					$("a.menu_btn2").text("- About");
-					$("a.menu_btn1").text("- H");
-					$("a.menu_btn3").text("- P");
-					$("a.menu_btn4").text("- C");
-					$("a").removeClass("select");
-					$("a.menu2").addClass("select");
-					$(".scroll").fadeOut(500);
-				} else if (scrollValue <= p_idx * p_wh) { //2160
-					$("a.menu_btn3").text("- Portfolio");
-					$("a.menu_btn2").text("- A");
-					$("a.menu_btn1").text("- H");
-					$("a.menu_btn4").text("- C");
-					$("a").removeClass("select");
-					$("a.menu3").addClass("select");
-				} else {
-					$("a.menu_btn1").text("- H");
-					$("a.menu_btn2").text("- A");
-					$("a.menu_btn3").text("- P");
-					$("a.menu_btn4").text("- Contact me");
-					$("a").removeClass("select");
-					$("a.menu4").addClass("select");
-				}
-			});
+                if (scrollValue <= 0) {
+                    $("a.menu_btn1").text("- Home");
+                    $("a.menu_btn2").text("- A");
+                    $("a.menu_btn3").text("- P");
+                    $("a.menu_btn4").text("- C");
+                    $("a").removeClass("select");
+                    $("a.menu1").addClass("select");
+                    $(".scroll").fadeIn();
+                } else if (scrollValue <= 1 * p_wh) { //1080
+                    $("a.menu_btn2").text("- About");
+                    $("a.menu_btn1").text("- H");
+                    $("a.menu_btn3").text("- P");
+                    $("a.menu_btn4").text("- C");
+                    $("a").removeClass("select");
+                    $("a.menu2").addClass("select");
+                    $(".scroll").fadeOut(500);
+                } else if (scrollValue <= p_idx * p_wh) { //2160
+                    $("a.menu_btn3").text("- Portfolio");
+                    $("a.menu_btn2").text("- A");
+                    $("a.menu_btn1").text("- H");
+                    $("a.menu_btn4").text("- C");
+                    $("a").removeClass("select");
+                    $("a.menu3").addClass("select");
+                } else {
+                    $("a.menu_btn1").text("- H");
+                    $("a.menu_btn2").text("- A");
+                    $("a.menu_btn3").text("- P");
+                    $("a.menu_btn4").text("- Contact me");
+                    $("a").removeClass("select");
+                    $("a.menu4").addClass("select");
+                }
+            });
 
 
 
-		});
-	</script>
-	<script>
-	
-		$(document).ready(function(){
-			
-			$(".txtBox h3").animate({
-				"margin-top":"25%","opacity":"1"
-			},1800)
-			
-		});
-		
-	</script>
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $(".txtBox h3").animate({
+                "margin-top": "25%",
+                "opacity": "1"
+            }, 1800)
+
+        });
+    </script>
 </head>
 
 <body>
 
-	<div id="wrap">
-		<div id="collap">
-			<nav id="pnb">
-				<ul>
-					<li><a href="#page1" class="menu1">HOME</a></li>
-					<li><a href="#page2" class="menu2">ABOUT ME</a>
-					</li>
-					<li><a href="#page3" class="menu3">PORTFOLIO</a></li>
-					<li><a href="#page4" class="menu4">CONTACT ME</a></li>
-				</ul>
+    <div id="wrap">
+        <div id="collap">
+            <nav id="pnb">
+                <ul>
+                    <li><a href="#page1" class="menu1">HOME</a></li>
+                    <li><a href="#page2" class="menu2">ABOUT ME</a>
+                    </li>
+                    <li><a href="#page3" class="menu3">PORTFOLIO</a></li>
+                    <li><a href="#page4" class="menu4">CONTACT ME</a></li>
+                </ul>
 
-			</nav>
-			<a href="" class="c_close"><i class="fas fa-times"></i></a>
-		</div>
-		<div id="nav">
-			<!--버튼-->
-			<ul>
-				<li><a href="#menu1" class="menu_btn1">- Home</a></li>
-				<li><a href="#menu2" class="menu_btn2">- A</a></li>
-				<li><a href="#menu3" class="menu_btn3">- P</a></li>
-				<li><a href="#menu4" class="menu_btn4">- C</a></li>
-			</ul>
-		</div>
+            </nav>
+            <a href="" class="c_close"><i class="fas fa-times"></i></a>
+        </div>
+        <div id="nav">
+            <!--버튼-->
+            <ul>
+                <li><a href="#menu1" class="menu_btn1">- Home</a></li>
+                <li><a href="#menu2" class="menu_btn2">- A</a></li>
+                <li><a href="#menu3" class="menu_btn3">- P</a></li>
+                <li><a href="#menu4" class="menu_btn4">- C</a></li>
+            </ul>
+        </div>
 
-		<div class="page" id="page1">
-			<header id="hd">
-				<a href="index.html" class="logo"><img src="./img/logo.png" alt="로고"></a>
-				<nav id="gnb">
-					<ul>
-						<li><a href="#page1" class="menu1">HOME</a></li>
-						<li><a href="#page2" class="menu2">ABOUT ME</a></li>
-						<li><a href="#page3" class="menu3">PORTFOLIO</a></li>
-						<li><a href="#page4" class="menu4">CONTACT ME</a></li>
-					</ul>
-				</nav>
-				<div class="toggle">
-					<span class="line line1"></span>
-					<span class="line line2"></span>
-					<span class="line line3"></span>
-				</div>
-			</header>
-			<div class="txt">
+        <div class="page" id="page1">
+            <header id="hd">
+                <a href="index.html" class="logo"><img src="./img/logo.png" alt="로고"></a>
+                <nav id="gnb">
+                    <ul>
+                        <li><a href="#page1" class="menu1">HOME</a></li>
+                        <li><a href="#page2" class="menu2">ABOUT ME</a></li>
+                        <li><a href="#page3" class="menu3">PORTFOLIO</a></li>
+                        <li><a href="#page4" class="menu4">CONTACT ME</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </header>
+            <div class="txt">
 
-			</div>
-			<div class="txtBox">
-				<!--<p class="cape">Carpe Diem</p>-->
-				<div class="txt_aniBox">
-					<h3>WEB DISIGN PORTFOLIO</h3>
-				</div>
-				
-				<p class="result">안녕하세요. 신입 웹퍼블리셔 / 웹디자이너 강예은입니다.</p>
-			</div>
-			<!--<div class="aniBox">
+            </div>
+            <div class="txtBox">
+                <!--<p class="cape">Carpe Diem</p>-->
+                <div class="txt_aniBox">
+                    <h3>WEB DISIGN PORTFOLIO</h3>
+                </div>
+
+                <p class="result">안녕하세요. 신입 웹퍼블리셔 / 웹디자이너 강예은입니다.</p>
+            </div>
+            <!--<div class="aniBox">
 				<img src="./img/little_light.png" alt="" class="light1">
 				<img src="./img/little_light.png" alt="" class="light2">
 			</div>-->
-		</div>
-		<div class="page" id="page2">
-			<div class="main">
-				<div class="vs vs1">
-					<h3>ABOUT ME</h3>
-					<div class="vs_pic"><img src="./img/my.jpg" alt="사진"></div>
-					
-			
-				</div>
-				<div class="vs vs2">
-					<p class="vs2_tit"><span class="or">#</span>책임감 있는 <span class="or">#</span>기본을 중요시하는</p>
-					<p class="vs_com"><span class="or">NAME</span>: 강예은</p>
-					<p class="vs_com"><span class="or">BIRTH</span>: 1995.10.02</p>
-					<p class="vs_com"><span class="or">LOCATION</span>:대전광역시 서구</p>
-					<p class="vs_com"><span class="or">E-MAIL</span>: kyy9510@naver.com</p>
-					<p class="vs_com"><span class="or">MOBILE</span>: 010.9471.9513</p>
-					<p class="vs_com"><span class="or">EDUCATION</span>: 그린컴퓨터아트학원 <br>스마트기기 서비스를 위한 UX/UI 디자인(반응형 웹 구현)전문가<br>과정 수료(2019.07 ~ 2020.01)</p>
-					<p class="vs_com"><span class="or">LICENSE</span> : 웹디자인 기능사 (2019.12)</p>
-				</div>
-				<div class="vs vs3">
-					<h3 class="vs3_tit">SKILL</h3>
-					<div class="g_wrap">
-						<p class="or">HTML</p>
-						<div class="graph_out">
-							<span class="g_mask gr_ht">
-								<div class="g_color">
-									<span class="txt">90%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--첫번째 그래프.po:re-->
-
-						<p class="or">CSS</p>
-						<div class="graph_out">
-							<span class="g_mask gr_cs">
-								<div class="g_color">
-									<span class="txt">80%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--두번째 그래프.po:re-->
+        </div>
+        <div class="page" id="page2">
+            <div class="main">
+                <div class="vs vs1">
+                    <h3>ABOUT ME</h3>
+                    <div class="vs_pic"><img src="./img/my.jpg" alt="사진"></div>
 
 
-						<p class="or">Photoshop</p>
-						<div class="graph_out">
-							<span class="g_mask gr_ps">
-								<div class="g_color">
-									<span class="txt">75%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--세번째 그래프.po:re-->
+                </div>
+                <div class="vs vs2">
+                    <p class="vs2_tit"><span class="or">#</span>책임감 있는 <span class="or">#</span>기본을 중요시하는</p>
+                    <p class="vs_com"><span class="or">NAME</span>: 강예은</p>
+                    <p class="vs_com"><span class="or">BIRTH</span>: 1995.10.02</p>
+                    <p class="vs_com"><span class="or">LOCATION</span>:대전광역시 서구</p>
+                    <p class="vs_com"><span class="or">E-MAIL</span>: kyy9510@naver.com</p>
+                    <p class="vs_com"><span class="or">MOBILE</span>: 010.9471.9513</p>
+                    <p class="vs_com"><span class="or">EDUCATION</span>: 그린컴퓨터아트학원 <br>스마트기기 서비스를 위한 UX/UI 디자인(반응형 웹 구현)전문가<br>과정 수료(2019.07 ~ 2020.01)</p>
+                    <p class="vs_com"><span class="or">LICENSE</span> : 웹디자인 기능사 (2019.12)</p>
+                </div>
+                <div class="vs vs3">
+                    <h3 class="vs3_tit">SKILL</h3>
+                    <div class="g_wrap">
+                        <p class="or">HTML</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_ht">
+                                <div class="g_color">
+                                    <span class="txt">90%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--첫번째 그래프.po:re-->
+
+                        <p class="or">CSS</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_cs">
+                                <div class="g_color">
+                                    <span class="txt">80%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--두번째 그래프.po:re-->
 
 
-						<p class="or">Illustrator</p>
-						<div class="graph_out">
-							<span class="g_mask gr_li">
-								<div class="g_color">
-									<span class="txt">70%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--네번째 그래프.po:re-->
+                        <p class="or">Photoshop</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_ps">
+                                <div class="g_color">
+                                    <span class="txt">75%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--세번째 그래프.po:re-->
 
 
-						<p class="or">Javasript</p>
-						<div class="graph_out">
-							<span class="g_mask gr_ja">
-								<div class="g_color">
-									<span class="txt">65%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--다섯번째 그래프.po:re-->
-
-						<p class="or">JQuery</p>
-						<div class="graph_out">
-							<span class="g_mask gr_jq">
-								<div class="g_color">
-									<span class="txt">50%</span>
-								</div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
-							</span>
-						</div>
-						<!--여섯번째 그래프.po:re-->
-					</div>
-					<!--wrap-->
-
-				</div>
-			</div>
-
-		</div>
+                        <p class="or">Illustrator</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_li">
+                                <div class="g_color">
+                                    <span class="txt">70%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--네번째 그래프.po:re-->
 
 
-		<div class="page" id="page3">
+                        <p class="or">Javasript</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_ja">
+                                <div class="g_color">
+                                    <span class="txt">65%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--다섯번째 그래프.po:re-->
 
-			<div class="portfolio">
-				<div class="controls">
-					<h3 class="por_tit">Portfolio</h3>
-					<div class="btn_box">
-						<button class="filter" data-filter="all">All</button>
+                        <p class="or">JQuery</p>
+                        <div class="graph_out">
+                            <span class="g_mask gr_jq">
+                                <div class="g_color">
+                                    <span class="txt">50%</span>
+                                </div><!-- 그래프 컬러 들어갈 곳 g_mask의 넓이에 따라 컬러가 보여짐-->
+                            </span>
+                        </div>
+                        <!--여섯번째 그래프.po:re-->
+                    </div>
+                    <!--wrap-->
 
-						<button class="filter" data-filter=".web">Web</button>
-						<button class="filter" data-filter=".mobile">Mobile</button>
-						<button class="filter" data-filter=".responsive">Responsive</button>
-						<button class="filter" data-filter=".other">Other</button>
-					</div>
-				</div>
-				<div class="container" id="mixItUp">
-					<div class="mix responsive" data-myorder="1">
+                </div>
+            </div>
 
-						<a href=""><img src="./img/project8.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">매니지먼트 숲</p>
-								<p class="bigCon">#RESPONSIVE #매니지먼트 숲 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-					<div class="mix responsive" data-myorder="2">
-						<a href=""><img src="./img/project7.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">정림건축</p>
-								<p class="bigCon">#RESPONSIVE #정림건축 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-					<div class="mix responsive" data-myorder="3">
-						<a href=""><img src="./img/project2.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">JOHNNY STUDIO</p>
-								<p class="bigCon">#RESPONSIVE #쟈니스튜디오 #제작페이지 #메인페이지 #서브페이지</p>
-							</div>
-						</a>
-
-					</div>
-					<div class="mix mobile" data-myorder="4">
-						<a href=""><img src="./img/project3.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">GRAND HYATT HOTEL</p>
-								<p class="bigCon">#MOBILE #그랜드하얏트호텔 </p>
-							</div>
-						</a>
-					</div>
-					<div class="mix web" data-myorder="5">
-						<a href=""><img src="./img/project6.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">서울식물원</p>
-								<p class="bigCon">#PC #서울식물원 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-					<div class="mix web" data-myorder="6">
-						<a href=""><img src="./img/project1.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">BURGER KING</p>
-								<p class="bigCon">#PC #버거킹 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-					<div class="mix web" data-myorder="7">
-						<a href="">
-							<img src="./img/project9.jpg" alt="">
-							<div class="mixTit">
-
-								<p class="bigTit">STARBUCKS</p>
-								<p class="bigCon">#PC #스타벅스 #리뉴얼 #메인페이지</p>
-
-							</div>
-						</a>
-					</div>
-					
-
-					<div class="mix web" data-myorder="8">
-						<a href=""><img src="./img/project4.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">CHLOE</p>
-								<p class="bigCon">#PC #끌로에 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-					<div class="mix web" data-myorder="9">
-						<a href=""><img src="./img/project5.jpg" alt="">
-							<div class="mixTit">
-								<p class="bigTit">함평나비축제</p>
-								<p class="bigCon">#PC #숲엔터테인먼트 #리뉴얼</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-			</div>
-
-			<div id="black">
-				<a href="" class="close"><i class="fas fa-times"></i></a>
-			</div>
-			<!--뒤에 암막같은 배경처리-->
-			<div class="pop_wrap">
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">매니지먼트 숲</h3>
-
-						<a href="http://kyy9510.github.io/s2/" class="address" target="new">http://kyy9510.github.io/s2/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>Responsive</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#fc0,#486a00</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									Mobile: iPhone 6/7/8 375x667<br>
-									Tablet PC: iPad 768x1024<br>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>기존 홈페이지는 메인페이지가 위에서 내려오는 형식이었다면, 고정형으로 바꿔 편의성을 높였습니다.또한 서브페이지에 나뉘어져있던 컨텐츠를 한 곳에 담아 가독성을 높였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal8.jpg" alt="매니지먼트 숲">
-							<img src="./img/modal8-1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<!--숲-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">정림건축</h3>
-
-						<a href="https://kyy9510.github.io/j2/" class="address" target="new">https://kyy9510.github.io/j2/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>Responsive</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#000</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									Mobile: iPhone 6/7/8 375x667<br>
-									Tablet PC: iPad 768x1024<br>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>배경에 주로 해당 브랜드에서 건축한 고화질의 사진을 사용하여 신뢰성을 높였습니다.또한 회사 소개페이지에서 아이콘을 사용하여 조금 더 쉽게 알아볼 수 있도록 가독성을 높였습니다</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal7.jpg" alt="정림건축1">
-							<img src="./img/modal7-1.jpg" alt="정림건축2">
-
-						</div>
-					</div>
-				</div>
-				<!--정림건축-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">Johnny Studio</h3>
-
-						<a href="http://kyy9510.github.io/j1/" class="address" target="new">http://kyy9510.github.io/j1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>Responsive</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#de7d4e, #fff</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									Mobile: iPhone 6/7/8 375x667<br>
-									Tablet PC: iPad 768x1024<br>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>기존에 블로그밖에 없던 홈페이지를 새로 제작하여 접근성과 편의성을 높였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal2.jpg" alt="쟈니스튜디오">
-							<img src="./img/modal2-1.jpg" alt="쟈니스튜디오">
-							<img src="./img/modal2-2.jpg" alt="쟈니스튜디오">
-						</div>
-					</div>
-				</div>
-				<!--쟈니스튜디오-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">Grand Hyatt Hotel</h3>
-
-						<a href="http://laura.dothome.co.kr/g1/" class="address" target="new">http://laura.dothome.co.kr/g1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>Mobile</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#000, #434343, #626262</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									Mobile: iPhone 6/7/8 375x667
-									</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>기존 하늘색이었던 주요색상을 어두운 계열로 바꿔 조금 더 고급스러운 느낌을 내고자 하였습니다. 객실 예약하기 버튼을 메인에 배치하여 접근성을 높였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/madal3.jpg" alt="그랜드하얏트호텔">
-							<img src="./img/modal3-1.jpg" alt="그랜드하얏트호텔">
-						</div>
-					</div>
-				</div>
-				<!--그랜드하얏트-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">서울식물원</h3>
-
-						<a href="http://laura.dothome.co.kr/s3/" class="address" target="new">http://laura.dothome.co.kr/s3/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>PC</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#638c0b,#4f7f2f</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>풀페이지 형식으로 페이지마다 통일성을 주어서 가독성을 높였으며,서브 페이지에는 탭 메뉴 방식으로 홈페이지를 이동하지 않고도 손쉽게 이용할 수 있는 방식을 택하였습니다</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal6.jpg" alt="서울식물원">
-							<img src="./img/modal6-1.jpg" alt="서울식물원">
-
-						</div>
-					</div>
-				</div>
-				<!--서울식물원-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">BURGER KING</h3>
-
-						<a href="http://kyy9510.github.io/b1/" class="address" target="new">http://kyy9510.github.io/b1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>PC</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#031021,#e2d7b7, #adc587, #a5937b</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>메인 슬라이드이미지에서 애니메이션 효과로 자연스레 이벤트 홍보를 유도하였으며, 아이콘 위주의 디자인으로 심미성과 가독성을 강화하여 리뉴얼 하였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal1.jpg" alt="버거킹">
-							<img src="./img/modal1-1.jpg" alt="버거킹">
-						</div>
-					</div>
-				</div>
-				<!--버거킹-->
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">STARBUCKS</h3>
-
-						<a href="http://kyy9510.github.io/s1/" class="address" target="new">http://kyy9510.github.io/s1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>PC</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#07493b,#222</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>메인 비주얼 이미지과 전체적인 컨텐츠에 애니메이션 효과를 넣어 독자들의 관심을 유발하도록 디자인 하였으며,기존 홈페이지에서 영역이 작았던 레이아웃들의 영역을 넓혀 가독성을 높였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal9.jpg" alt="버거킹모달">
-						</div>
-					</div>
-				</div>
-				<!--스타벅스-->
-				
-
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">Chloe</h3>
-
-						<a href="http://laura.dothome.co.kr/c1/" class="address" target="new">http://laura.dothome.co.kr/c1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>PC</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#eddec3, #d0bb95</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>풀페이지 레이아웃으로 독자들이 조금 더 페이지를 쉽게 구분하여 볼 수 있게 구성하였으며, 많은 정보를 담지 않고 상세페이지에서 원하는 정보를 얻을 수 있도록 하였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal4.jpg" alt="Chloe1">
-							<img src="./img/modal4-1.jpg" alt="Chloe2">
-
-						</div>
-					</div>
-				</div>
-				<!--끌로에-->
-
-				<div class="pop">
-					<div class="pop_scroll">
-						<h3 class="pop_tit">함평 나비 축제</h3>
-
-						<a href="https://kyy9510.github.io/h1/" class="address" target="new">https://kyy9510.github.io/h1/</a>
-						<div class="pop_content">
-							<table class="pop_con">
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
-									<td>PC</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
-									<td>#8ec31f, #3e8d0e,#fc0</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
-									<td>HTML,CSS,JavaScript,JQuery</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
-									<td>디자인(100%) 퍼블리싱(100%)</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
-									<td>
-									PC: 1920x1080</td>
-								</tr>
-								<tr>
-									<td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
-									<td>자연 친화적인 느낌을 위해 전체적인 주요 색상으로 녹색 계열을 사용하였으며,메인비주얼 이미지는 아이들의 시선에 맞춰 흥미를 유발 할 수 있는 이미지로 구성하였습니다. 또한 축제의 일정도 메인페이지에 담아 정보의 편의성을 높였습니다.</td>
-								</tr>
-							</table>
-						</div>
-						<div class="pop_img">
-							<img src="./img/modal5.jpg" alt="함평 나비 축제1">
-							<img src="./img/modal5-1.jpg" alt="함평 나비 축제2">
-
-						</div>
-					</div>
-				</div>
-				<!--함평-->
-			</div>
+        </div>
 
 
+        <div class="page" id="page3">
 
-		</div>
-		<!--page3-->
+            <div class="portfolio">
+                <div class="controls">
+                    <h3 class="por_tit">Portfolio</h3>
+                    <div class="btn_box">
+                        <button class="filter" data-filter="all">All</button>
 
-		<div class="page" id="page4">
-			<div class="contact">
-				<h3 class="ct_tit">CONTACT ME</h3>
-				<div class="commu">
-					<p class="commu_txt">MOBILE: 010.9471.9513</p>
-					<p class="commu_txt">E-MAIL: kyy9510@naver.com</p>
-				</div>
-				<div class="click">
-					<a href="mailto:kyy9510@naver.com" class="click_box">CLICK TO CONTACT!</a>
-					<a href="mailto:kyy9510@naver.com" class="finger"><img src="./img/click.png" alt="손가락"></a>
-				</div>
-				<footer class="ft">
-					<p class="copy">COPYRIGHT &copy; 2019 YEEUN ALL RIGHT RESERVED.</p>
-				</footer>
-			</div>
+                        <button class="filter" data-filter=".web">Web</button>
+                        <button class="filter" data-filter=".mobile">Mobile</button>
+                        <button class="filter" data-filter=".responsive">Responsive</button>
+                        <button class="filter" data-filter=".other">Other</button>
+                    </div>
+                </div>
+                <div class="container" id="mixItUp">
+                    <div class="mix responsive" data-myorder="1">
+
+                        <a href=""><img src="./img/project8.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">매니지먼트 숲</p>
+                                <p class="bigCon">#RESPONSIVE #매니지먼트 숲 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix responsive" data-myorder="2">
+                        <a href=""><img src="./img/project7.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">정림건축</p>
+                                <p class="bigCon">#RESPONSIVE #정림건축 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix responsive" data-myorder="3">
+                        <a href=""><img src="./img/project2.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">JOHNNY STUDIO</p>
+                                <p class="bigCon">#RESPONSIVE #쟈니스튜디오 #제작페이지 #메인페이지 #서브페이지</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="mix mobile" data-myorder="4">
+                        <a href=""><img src="./img/project3.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">GRAND HYATT HOTEL</p>
+                                <p class="bigCon">#MOBILE #그랜드하얏트호텔 </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix web" data-myorder="5">
+                        <a href=""><img src="./img/project6.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">서울식물원</p>
+                                <p class="bigCon">#PC #서울식물원 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix web" data-myorder="6">
+                        <a href=""><img src="./img/project1.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">BURGER KING</p>
+                                <p class="bigCon">#PC #버거킹 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix web" data-myorder="7">
+                        <a href="">
+                            <img src="./img/project9.jpg" alt="">
+                            <div class="mixTit">
+
+                                <p class="bigTit">STARBUCKS</p>
+                                <p class="bigCon">#PC #스타벅스 #리뉴얼 #메인페이지</p>
+
+                            </div>
+                        </a>
+                    </div>
 
 
-		</div>
+                    <div class="mix web" data-myorder="8">
+                        <a href=""><img src="./img/project4.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">CHLOE</p>
+                                <p class="bigCon">#PC #끌로에 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix web" data-myorder="9">
+                        <a href=""><img src="./img/project5.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">함평나비축제</p>
+                                <p class="bigCon">#PC #숲엔터테인먼트 #리뉴얼</p>
+                            </div>
+                        </a>
+                    </div>
 
-	</div>
-	<div class="scroll">
-		<p class="sc_body">
-			<span class="sc_center"></span>
-			<span class="sc_bar"></span>
+                    <div class="mix other" data-myorder="10">
+                        <a href=""><img src="./img/etc1.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">함평나비축제 포스터</p>
+                                <p class="bigCon">#축제포스터 #함평나비축제 #포스터</p>
+                            </div>
+                        </a>
+                    </div>
 
-		</p>
-		<span class="sc_com">SCROLL</span>
-	</div>
+                    <div class="mix other" data-myorder="11">
+                        <a href=""><img src="./img/etc2.jpg" alt="">
+                            <div class="mixTit">
+                                <p class="bigTit">함평나비축제 리플렛</p>
+                                <p class="bigCon">#축제 리플렛 #함평나비축제 #리플렛</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="black">
+                <!--<a href="" class="close"><i class="fas fa-times"></i></a>-->
+            </div>
+            <!--뒤에 암막같은 배경처리-->
+            <div class="pop_wrap">
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">매니지먼트 숲</h3>
+
+                        <a href="http://kyy9510.github.io/s2/" class="address" target="new">http://kyy9510.github.io/s2/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>Responsive</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#fc0,#486a00</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        Mobile: iPhone 6/7/8 375x667<br>
+                                        Tablet PC: iPad 768x1024<br>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>기존 홈페이지는 메인페이지가 위에서 내려오는 형식이었다면, 고정형으로 바꿔 편의성을 높였습니다.또한 서브페이지에 나뉘어져있던 컨텐츠를 한 곳에 담아 가독성을 높였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal8.jpg" alt="매니지먼트 숲">
+                            <img src="./img/modal8-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--숲-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">정림건축</h3>
+
+                        <a href="https://kyy9510.github.io/j2/" class="address" target="new">https://kyy9510.github.io/j2/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>Responsive</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#000</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        Mobile: iPhone 6/7/8 375x667<br>
+                                        Tablet PC: iPad 768x1024<br>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>배경에 주로 해당 브랜드에서 건축한 고화질의 사진을 사용하여 신뢰성을 높였습니다.또한 회사 소개페이지에서 아이콘을 사용하여 조금 더 쉽게 알아볼 수 있도록 가독성을 높였습니다</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal7.jpg" alt="정림건축1">
+                            <img src="./img/modal7-1.jpg" alt="정림건축2">
+
+                        </div>
+                    </div>
+                </div>
+                <!--정림건축-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">Johnny Studio</h3>
+
+                        <a href="http://kyy9510.github.io/j1/" class="address" target="new">http://kyy9510.github.io/j1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>Responsive</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#de7d4e, #fff</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        Mobile: iPhone 6/7/8 375x667<br>
+                                        Tablet PC: iPad 768x1024<br>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>기존에 블로그밖에 없던 홈페이지를 새로 제작하여 접근성과 편의성을 높였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal2.jpg" alt="쟈니스튜디오">
+                            <img src="./img/modal2-1.jpg" alt="쟈니스튜디오">
+                            <img src="./img/modal2-2.jpg" alt="쟈니스튜디오">
+                        </div>
+                    </div>
+                </div>
+                <!--쟈니스튜디오-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">Grand Hyatt Hotel</h3>
+
+                        <a href="http://laura.dothome.co.kr/g1/" class="address" target="new">http://laura.dothome.co.kr/g1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>Mobile</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#000, #434343, #626262</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        Mobile: iPhone 6/7/8 375x667
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>기존 하늘색이었던 주요색상을 어두운 계열로 바꿔 조금 더 고급스러운 느낌을 내고자 하였습니다. 객실 예약하기 버튼을 메인에 배치하여 접근성을 높였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/madal3.jpg" alt="그랜드하얏트호텔">
+                            <img src="./img/modal3-1.jpg" alt="그랜드하얏트호텔">
+                        </div>
+                    </div>
+                </div>
+                <!--그랜드하얏트-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">서울식물원</h3>
+
+                        <a href="http://laura.dothome.co.kr/s3/" class="address" target="new">http://laura.dothome.co.kr/s3/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#638c0b,#4f7f2f</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>풀페이지 형식으로 페이지마다 통일성을 주어서 가독성을 높였으며,서브 페이지에는 탭 메뉴 방식으로 홈페이지를 이동하지 않고도 손쉽게 이용할 수 있는 방식을 택하였습니다</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal6.jpg" alt="서울식물원">
+                            <img src="./img/modal6-1.jpg" alt="서울식물원">
+
+                        </div>
+                    </div>
+                </div>
+                <!--서울식물원-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">BURGER KING</h3>
+
+                        <a href="http://kyy9510.github.io/b1/" class="address" target="new">http://kyy9510.github.io/b1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#031021,#e2d7b7, #adc587, #a5937b</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>메인 슬라이드이미지에서 애니메이션 효과로 자연스레 이벤트 홍보를 유도하였으며, 아이콘 위주의 디자인으로 심미성과 가독성을 강화하여 리뉴얼 하였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal1.jpg" alt="버거킹">
+                            <img src="./img/modal1-1.jpg" alt="버거킹">
+                        </div>
+                    </div>
+                </div>
+                <!--버거킹-->
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">STARBUCKS</h3>
+
+                        <a href="http://kyy9510.github.io/s1/" class="address" target="new">http://kyy9510.github.io/s1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#07493b,#222</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>메인 비주얼 이미지과 전체적인 컨텐츠에 애니메이션 효과를 넣어 독자들의 관심을 유발하도록 디자인 하였으며,기존 홈페이지에서 영역이 작았던 레이아웃들의 영역을 넓혀 가독성을 높였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal9.jpg" alt="버거킹모달">
+                        </div>
+                    </div>
+                </div>
+                <!--스타벅스-->
+
+
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">Chloe</h3>
+
+                        <a href="http://laura.dothome.co.kr/c1/" class="address" target="new">http://laura.dothome.co.kr/c1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#eddec3, #d0bb95</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML,CSS,JavaScript,JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>풀페이지 레이아웃으로 독자들이 조금 더 페이지를 쉽게 구분하여 볼 수 있게 구성하였으며, 많은 정보를 담지 않고 상세페이지에서 원하는 정보를 얻을 수 있도록 하였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal4.jpg" alt="Chloe1">
+                            <img src="./img/modal4-1.jpg" alt="Chloe2">
+
+                        </div>
+                    </div>
+                </div>
+                <!--끌로에-->
+
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">함평 나비 축제</h3>
+
+                        <a href="https://kyy9510.github.io/h1/" class="address" target="new">https://kyy9510.github.io/h1/</a>
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Viewport</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#8ec31f, #3e8d0e,#fc0</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>HTML, CSS, JavaScript, JQuery</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>참여도</td>
+                                    <td>디자인(100%) 퍼블리싱(100%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>해상도</td>
+                                    <td>
+                                        PC: 1920x1080</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>기획의도</td>
+                                    <td>자연 친화적인 느낌을 위해 전체적인 주요 색상으로 녹색 계열을 사용하였으며,메인비주얼 이미지는 아이들의 시선에 맞춰 흥미를 유발 할 수 있는 이미지로 구성하였습니다. 또한 축제의 일정도 메인페이지에 담아 정보의 편의성을 높였습니다.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/modal5.jpg" alt="함평 나비 축제1">
+                            <img src="./img/modal5-1.jpg" alt="함평 나비 축제2">
+
+                        </div>
+                    </div>
+                </div>
+                <!--함평-->
+
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">함평 나비 축제 포스터</h3>
+
+
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Design</td>
+                                    <td>Poster</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#b9ddf5, #98be1d, #3d8c0d</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>Photoshop, Illustrator</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/etc1-1.jpg" alt="함평 나비 축제1">
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--합평 포스터-->
+
+                <div class="pop">
+                    <div class="pop_scroll">
+                        <h3 class="pop_tit">함평 나비 축제 리플렛</h3>
+
+
+                        <div class="pop_content">
+                            <table class="pop_con">
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Design</td>
+                                    <td>Leaflet</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Palette</td>
+                                    <td>#b9ddf5, #98be1d, #3d8c0d</td>
+                                </tr>
+                                <tr>
+                                    <td class="iconL"><i class="far fa-lightbulb"></i>Program</td>
+                                    <td>Photoshop, Illustrator</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="pop_img">
+                            <img src="./img/etc2-1.jpg" alt="함평 나비 축제1">
+                            <img src="./img/etc2-2.jpg" alt="함평 나비 축제2">
+
+                        </div>
+                    </div>
+                </div><!--함평 리플렛-->
+            </div>
+
+
+
+        </div>
+        <!--page3-->
+
+        <div class="page" id="page4">
+            <div class="contact">
+                <h3 class="ct_tit">CONTACT ME</h3>
+                <div class="commu">
+                    <p class="commu_txt">MOBILE: 010.9471.9513</p>
+                    <p class="commu_txt">E-MAIL: kyy9510@naver.com</p>
+                </div>
+                <div class="click">
+                    <a href="mailto:kyy9510@naver.com" class="click_box">CLICK TO CONTACT!</a>
+                    <a href="mailto:kyy9510@naver.com" class="finger"><img src="./img/click.png" alt="손가락"></a>
+                </div>
+                <footer class="ft">
+                    <p class="copy">COPYRIGHT &copy; 2019 YEEUN ALL RIGHT RESERVED.</p>
+                </footer>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="scroll">
+        <p class="sc_body">
+            <span class="sc_center"></span>
+            <span class="sc_bar"></span>
+
+        </p>
+        <span class="sc_com">SCROLL</span>
+    </div>
 </body></html>
